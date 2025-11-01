@@ -1,0 +1,23 @@
+meta {
+  name: Update Tasks
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:8080/tasks
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 2,
+    "description": "Testar o projeto"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

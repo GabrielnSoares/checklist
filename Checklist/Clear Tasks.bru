@@ -1,0 +1,23 @@
+meta {
+  name: Clear Tasks
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/tasks/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 1,
+    "description": "Desenvolver o projeto"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
